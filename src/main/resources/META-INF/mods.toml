@@ -1,0 +1,28 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="All Rights Reserved - Private Use Only"
+issueTrackerURL=""
+
+[[mods]]
+modId="mymusic"
+version="${file.jarVersion}"
+displayName="MyMusic Privat"
+authors="Victoriamangles"
+description='''
+Private-Use Mod die eigene Music Discs mit individuellen Sounds und Texturen ins Spiel bringt.
+Nur zur privaten Nutzung gedacht, keine Weiterverbreitung.
+'''
+
+[[dependencies.mymusic]]
+    modId="forge"
+    mandatory=true
+    versionRange="[47,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.mymusic]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1,1.21)"
+    ordering="NONE"
+    side="BOTH"

@@ -1,0 +1,282 @@
+{
+  "disc1": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc1",
+    "sounds": [
+      "mymusic:records/disc1"
+    ]
+  },
+  "disc2": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc2",
+    "sounds": [
+      "mymusic:records/disc2"
+    ]
+  },
+  "disc3": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc3",
+    "sounds": [
+      "mymusic:records/disc3"
+    ]
+  },
+  "disc4": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc4",
+    "sounds": [
+      "mymusic:records/disc4"
+    ]
+  },
+  "disc5": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc5",
+    "sounds": [
+      "mymusic:records/disc5"
+    ]
+  },
+  "disc6": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc6",
+    "sounds": [
+      "mymusic:records/disc6"
+    ]
+  },
+  "disc7": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc7",
+    "sounds": [
+      "mymusic:records/disc7"
+    ]
+  },
+  "disc8": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc8",
+    "sounds": [
+      "mymusic:records/disc8"
+    ]
+  },
+  "disc9": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc9",
+    "sounds": [
+      "mymusic:records/disc9"
+    ]
+  },
+  "disc10": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc10",
+    "sounds": [
+      "mymusic:records/disc10"
+    ]
+  },
+  "disc11": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc11",
+    "sounds": [
+      "mymusic:records/disc11"
+    ]
+  },
+  "disc12": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc12",
+    "sounds": [
+      "mymusic:records/disc12"
+    ]
+  },
+  "disc13": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc13",
+    "sounds": [
+      "mymusic:records/disc13"
+    ]
+  },
+  "disc14": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc14",
+    "sounds": [
+      "mymusic:records/disc14"
+    ]
+  },
+  "disc15": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc15",
+    "sounds": [
+      "mymusic:records/disc15"
+    ]
+  },
+  "disc16": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc16",
+    "sounds": [
+      "mymusic:records/disc16"
+    ]
+  },
+  "disc17": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc17",
+    "sounds": [
+      "mymusic:records/disc17"
+    ]
+  },
+  "disc18": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc18",
+    "sounds": [
+      "mymusic:records/disc18"
+    ]
+  },
+  "disc19": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc19",
+    "sounds": [
+      "mymusic:records/disc19"
+    ]
+  },
+  "disc20": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc20",
+    "sounds": [
+      "mymusic:records/disc20"
+    ]
+  },
+  "disc21": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc21",
+    "sounds": [
+      "mymusic:records/disc21"
+    ]
+  },
+  "disc22": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc22",
+    "sounds": [
+      "mymusic:records/disc22"
+    ]
+  },
+  "disc23": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc23",
+    "sounds": [
+      "mymusic:records/disc23"
+    ]
+  },
+  "disc24": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc24",
+    "sounds": [
+      "mymusic:records/disc24"
+    ]
+  },
+  "disc25": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc25",
+    "sounds": [
+      "mymusic:records/disc25"
+    ]
+  },
+  "disc26": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc26",
+    "sounds": [
+      "mymusic:records/disc26"
+    ]
+  },
+  "disc27": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc27",
+    "sounds": [
+      "mymusic:records/disc27"
+    ]
+  },
+  "disc28": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc28",
+    "sounds": [
+      "mymusic:records/disc28"
+    ]
+  },
+  "disc29": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc29",
+    "sounds": [
+      "mymusic:records/disc29"
+    ]
+  },
+  "disc30": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc30",
+    "sounds": [
+      "mymusic:records/disc30"
+    ]
+  },
+  "disc31": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc31",
+    "sounds": [
+      "mymusic:records/disc31"
+    ]
+  },
+  "disc32": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc32",
+    "sounds": [
+      "mymusic:records/disc32"
+    ]
+  },
+  "disc33": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc33",
+    "sounds": [
+      "mymusic:records/disc33"
+    ]
+  },
+  "disc34": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc34",
+    "sounds": [
+      "mymusic:records/disc34"
+    ]
+  },
+  "disc35": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc35",
+    "sounds": [
+      "mymusic:records/disc35"
+    ]
+  },
+  "disc36": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc36",
+    "sounds": [
+      "mymusic:records/disc36"
+    ]
+  },
+  "disc37": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc37",
+    "sounds": [
+      "mymusic:records/disc37"
+    ]
+  },
+  "disc38": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc38",
+    "sounds": [
+      "mymusic:records/disc38"
+    ]
+  },
+  "disc39": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc39",
+    "sounds": [
+      "mymusic:records/disc39"
+    ]
+  },
+  "disc40": {
+    "category": "record",
+    "subtitle": "record.mymusic.disc40",
+    "sounds": [
+      "mymusic:records/disc40"
+    ]
+  }
+}

@@ -1,0 +1,372 @@
+{
+  "music.game": {
+    "replace": false,
+    "sounds": [
+      {
+        "name": "mymusic:records/disc33",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc35",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc31",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc27",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc19",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc5",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc36",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc38",
+        "stream": true
+      }
+    ]
+  },
+  "music.overworld.dripstone_caves": {
+    "replace": false,
+    "sounds": [
+      {
+        "name": "mymusic:records/disc33",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc35",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc31",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc27",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc19",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc5",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc36",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc38",
+        "stream": true
+      }
+    ]
+  },
+  "music.overworld.lush_caves": {
+    "replace": false,
+    "sounds": [
+      {
+        "name": "mymusic:records/disc33",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc35",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc31",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc27",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc19",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc5",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc36",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc38",
+        "stream": true
+      }
+    ]
+  },
+  "music.overworld.deep_dark": {
+    "replace": false,
+    "sounds": [
+      {
+        "name": "mymusic:records/disc33",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc35",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc31",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc27",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc19",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc5",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc36",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc38",
+        "stream": true
+      }
+    ]
+  },
+  "music.overworld.grove": {
+    "replace": false,
+    "sounds": [
+      {
+        "name": "mymusic:records/disc33",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc35",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc31",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc27",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc19",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc5",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc36",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc38",
+        "stream": true
+      }
+    ]
+  },
+  "music.overworld.jagged_peaks": {
+    "replace": false,
+    "sounds": [
+      {
+        "name": "mymusic:records/disc33",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc35",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc31",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc27",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc19",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc5",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc36",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc38",
+        "stream": true
+      }
+    ]
+  },
+  "music.overworld.stony_peaks": {
+    "replace": false,
+    "sounds": [
+      {
+        "name": "mymusic:records/disc33",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc35",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc31",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc27",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc19",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc5",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc36",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc38",
+        "stream": true
+      }
+    ]
+  },
+  "music.overworld.frozen_peaks": {
+    "replace": false,
+    "sounds": [
+      {
+        "name": "mymusic:records/disc33",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc35",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc31",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc27",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc19",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc5",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc36",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc38",
+        "stream": true
+      }
+    ]
+  },
+  "music.overworld.snowy_slopes": {
+    "replace": false,
+    "sounds": [
+      {
+        "name": "mymusic:records/disc33",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc35",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc31",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc27",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc19",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc5",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc36",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc38",
+        "stream": true
+      }
+    ]
+  },
+  "music.overworld.swamp": {
+    "replace": false,
+    "sounds": [
+      {
+        "name": "mymusic:records/disc33",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc35",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc31",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc27",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc19",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc5",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc36",
+        "stream": true
+      },
+      {
+        "name": "mymusic:records/disc38",
+        "stream": true
+      }
+    ]
+  }
+}
