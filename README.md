@@ -26,3 +26,12 @@ Spieler müssen dort NUR ihre eigenen discX.ogg Dateien direkt reinlegen
 HINWEIS: Dieser Teil ist experimentell und wurde nicht kompiliert/getestet.
 Falls beim Build Fehler auftauchen, bitte den kompletten Fehlertext schicken -
 das ist eine Forge-Versions-sensible API, die wir dann gemeinsam anpassen.
+
+## Version 1.1 - Loot-Kisten & Mob-Drops (nur Official-Variante)
+Discs können jetzt im normalen Spielverlauf gefunden werden:
+- In bestimmten Loot-Kisten (Dungeons, Mineshafts, Strongholds, etc.)
+- Als seltener Drop von feindlichen Mobs (Standard: 0.2% Chance pro Kill)
+
+Beides ist konfigurierbar unter: config/mymusic-common.toml
+- loot_chests.enabled / loot_chests.chance / loot_chests.tables
+- mob_drops.enabled / mob_drops.chance
