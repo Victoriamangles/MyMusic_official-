@@ -19,14 +19,20 @@ public class ModItems {
 
     static {
         for (ModDiscs.DiscDefinition disc : ModDiscs.ALL) {
-            int lengthInTicks = disc.lengthInSeconds() * 20;
+            // Laenge kommt bereits fertig ueberschrieben aus ModDiscs.ALL
+            // (siehe ModDiscLengths.java) - hier nichts weiter noetig.
+            //
+            // WICHTIG: In diesem Environment (MC Eternal 2 / Sophisticated
+            // Backpacks Jukebox-Upgrade) wird der Laengen-Wert direkt als
+            // Sekunden interpretiert, nicht als Ticks - empirisch bestaetigt
+            // durch Stoppuhr-Test (26.08.2026).
             RegistryObject<Item> item = ITEMS.register(disc.id(), () -> new RecordItem(
                     disc.comparatorOutput(),
                     ModSounds.SOUND_MAP.get(disc.id()).get(),
                     new Item.Properties()
                             .stacksTo(1)
                             .rarity(Rarity.RARE),
-                    lengthInTicks
+                    disc.lengthInSeconds()
             ));
             ITEM_MAP.put(disc.id(), item);
         }

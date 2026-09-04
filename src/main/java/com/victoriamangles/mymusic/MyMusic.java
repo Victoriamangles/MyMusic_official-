@@ -17,6 +17,6 @@ public class MyMusic {
         ModItems.ITEMS.register(modEventBus);
         ModCreativeTab.CREATIVE_MODE_TABS.register(modEventBus);
 
-        ModLoadingContext.get().registerConfig(Type.COMMON, ModConfig.COMMON_SPEC);
+        ModLoadingContext.get().registerConfig(Type.COMMON, ModConfig.COMMON_SPEC, "MyMusic/mymusic-common.toml");
     }
 }

@@ -14,40 +14,39 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.loading.FMLPaths;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
-/**
- * Registriert automatisch einen externen, FLACHEN Ordner als zusätzliches Resource Pack,
- * OHNE dass der Spieler es in den Optionen aktivieren muss.
- *
- * Ordner: .minecraft/config/MyMusic/Musics/
- * Dort legt der Spieler direkt disc1.ogg, disc2.ogg, ... disc40.ogg rein - KEINE
- * Unterordner nötig. Diese Klasse übersetzt intern die Anfrage nach
- * "assets/mymusic/sounds/records/discX.ogg" automatisch auf die flache Datei "discX.ogg".
- *
- * EXPERIMENTELL: Diese Datei nutzt tiefere Forge-Resource-System-APIs, die sich
- * zwischen Versionen öfter ändern. Konnte hier nicht kompiliert werden.
- */
 @Mod.EventBusSubscriber(modid = MyMusic.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModExternalResourcePack {
 
-    private static final String FOLDER_NAME = "MyMusic/Musics";
+    private static final String FOLDER_NAME = "MyMusic/Music";
     private static final String NAMESPACE = "mymusic";
     private static final String SOUND_PREFIX = "sounds/records/";
+
+    private static final List<String> AMBIENT_SOUND_EVENTS = List.of(
+            "music.overworld.dripstone_caves",
+            "music.overworld.lush_caves",
+            "music.overworld.deep_dark",
+            "music.overworld.grove",
+            "music.overworld.jagged_peaks",
+            "music.overworld.stony_peaks",
+            "music.overworld.frozen_peaks",
+            "music.overworld.snowy_slopes",
+            "music.overworld.swamp"
+    );
 
     public static Path getExternalMusicFolder() {
         return FMLPaths.CONFIGDIR.get().resolve(FOLDER_NAME);
     }
 
-    /**
-     * Legt NUR den Ordner config/MyMusic/Musics an (keine Unterordner) plus eine
-     * automatisch generierte pack.mcmeta (Pflicht-Metadatei für jedes Resource Pack,
-     * aber kein Unterordner - liegt direkt neben den .ogg Dateien).
-     */
     public static void ensureFolderExists() {
         try {
             Path folder = getExternalMusicFolder();
@@ -95,11 +94,20 @@ public class ModExternalResourcePack {
         });
     }
 
-    /**
-     * Wrappt PathPackResources, leitet aber Anfragen nach
-     * assets/mymusic/sounds/records/discX.ogg auf die flache Datei
-     * discX.ogg im externen Ordner um.
-     */
+    private static byte[] buildDynamicVanillaSoundsJson() {
+        List<? extends Integer> discNumbers = ModConfig.BACKGROUND_MUSIC_DISCS.get();
+
+        String soundsArray = discNumbers.stream()
+                .map(n -> "{\"name\":\"mymusic:records/disc" + n + "\",\"stream\":true}")
+                .collect(Collectors.joining(","));
+
+        String eventsJson = AMBIENT_SOUND_EVENTS.stream()
+                .map(event -> "\"" + event + "\":{\"replace\":false,\"sounds\":[" + soundsArray + "]}")
+                .collect(Collectors.joining(","));
+
+        return ("{" + eventsJson + "}").getBytes(StandardCharsets.UTF_8);
+    }
+
     private static class FlatFolderPackResources implements PackResources {
 
         private final PathPackResources delegate;
@@ -117,10 +125,12 @@ public class ModExternalResourcePack {
 
         @Override
         public IoSupplier<InputStream> getResource(PackType type, ResourceLocation location) {
-            if (type == PackType.CLIENT_RESOURCES
-                    && NAMESPACE.equals(location.getNamespace())
-                    && location.getPath().startsWith(SOUND_PREFIX)) {
+            if (type != PackType.CLIENT_RESOURCES) {
+                return delegate.getResource(type, location);
+            }
 
+            if (NAMESPACE.equals(location.getNamespace())
+                    && location.getPath().startsWith(SOUND_PREFIX)) {
                 String fileName = location.getPath().substring(SOUND_PREFIX.length());
                 Path filePath = root.resolve(fileName);
                 if (Files.exists(filePath)) {
@@ -128,12 +138,24 @@ public class ModExternalResourcePack {
                 }
                 return null;
             }
+
+            if ("minecraft".equals(location.getNamespace())
+                    && location.getPath().equals("sounds.json")) {
+                byte[] data = buildDynamicVanillaSoundsJson();
+                return () -> new ByteArrayInputStream(data);
+            }
+
             return delegate.getResource(type, location);
         }
 
         @Override
         public void listResources(PackType type, String namespace, String path, ResourceOutput resourceOutput) {
-            if (type == PackType.CLIENT_RESOURCES && NAMESPACE.equals(namespace)) {
+            if (type != PackType.CLIENT_RESOURCES) {
+                delegate.listResources(type, namespace, path, resourceOutput);
+                return;
+            }
+
+            if (NAMESPACE.equals(namespace)) {
                 try (var stream = Files.list(root)) {
                     stream.filter(p -> p.getFileName().toString().toLowerCase().endsWith(".ogg"))
                             .forEach(oggFile -> {
@@ -149,12 +171,20 @@ public class ModExternalResourcePack {
                 }
                 return;
             }
+
+            if ("minecraft".equals(namespace) && "sounds.json".startsWith(path)) {
+                ResourceLocation location = new ResourceLocation("minecraft", "sounds.json");
+                byte[] data = buildDynamicVanillaSoundsJson();
+                resourceOutput.accept(location, () -> new ByteArrayInputStream(data));
+                return;
+            }
+
             delegate.listResources(type, namespace, path, resourceOutput);
         }
 
         @Override
         public Set<String> getNamespaces(PackType type) {
-            return type == PackType.CLIENT_RESOURCES ? Set.of(NAMESPACE) : Set.of();
+            return type == PackType.CLIENT_RESOURCES ? Set.of(NAMESPACE, "minecraft") : Set.of();
         }
 
         @Override

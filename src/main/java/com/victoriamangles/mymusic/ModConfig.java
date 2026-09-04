@@ -7,7 +7,13 @@ import java.util.List;
 
 /**
  * Config-Werte, die der Spieler selbst anpassen kann.
- * Datei liegt nach dem ersten Start unter: config/mymusic-common.toml
+ * Datei liegt unter: config/MyMusic/mymusic-common.toml
+ *
+ * HINWEIS: Disc-Laengen liegen NICHT hier, sondern in der separaten,
+ * selbst eingelesenen Datei config/MyMusic/DiscLengths.txt (siehe
+ * ModDiscLengths.java) - Grund: Forge laedt COMMON-Configs erst NACH der
+ * Item-Registrierung, Type.STARTUP existiert in Forge 47.4.2 nicht. Die
+ * eigene Text-Datei umgeht dieses Timing-Problem komplett.
  */
 public class ModConfig {
 
@@ -19,6 +25,8 @@ public class ModConfig {
 
     public static final ForgeConfigSpec.BooleanValue MOB_DROP_ENABLED;
     public static final ForgeConfigSpec.DoubleValue MOB_DROP_CHANCE;
+
+    public static final ForgeConfigSpec.ConfigValue<List<? extends Integer>> BACKGROUND_MUSIC_DISCS;
 
     static {
         ForgeConfigSpec.Builder builder = new ForgeConfigSpec.Builder();
@@ -67,6 +75,19 @@ public class ModConfig {
                 .comment("Wahrscheinlichkeit (0.0 bis 1.0), dass ein getöteter feindlicher Mob EINE zufällige Disc droppt.",
                         "0.002 = 0.2% Chance pro Kill. Nur relevant wenn 'enabled' true ist.")
                 .defineInRange("chance", 0.002, 0.0, 1.0);
+
+        builder.pop();
+
+        builder.push("ambient_music");
+
+        BACKGROUND_MUSIC_DISCS = builder
+                .comment("Welche Disc-Nummern sollen ZUSAETZLICH als normale Hintergrundmusik in der",
+                        "Overworld (und Caves&Cliffs-Biomen) auftauchen? Nur die Nummer eintragen, z.B.:",
+                        "background_music_discs = [1, 4, 6, 12, 41]",
+                        "Leere Liste [] deaktiviert die Ambient-Music-Funktion komplett.")
+                .defineList("background_music_discs", Arrays.asList(
+                        5, 19, 27, 31, 33, 35, 36, 38
+                ), obj -> obj instanceof Integer);
 
         builder.pop();
 

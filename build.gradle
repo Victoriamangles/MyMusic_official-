@@ -4,7 +4,7 @@ plugins {
     id 'net.minecraftforge.gradle' version '[6.0,6.2)'
 }
 
-version = '1.1'
+version = '1.2'
 group = 'com.victoriamangles.mymusic'
 
 base {
@@ -51,7 +51,7 @@ dependencies {
 }
 
 jar {
-    archiveFileName = "MyMusic_Disc_official_V1.1.Jav1.20.1F.47.4.2.jar"
+    archiveFileName = "MyMusic_Disc_official_V1.2.Jav1.20.1F.47.4.2.jar"
     manifest {
         attributes([
             "Specification-Title"     : "mymusic",

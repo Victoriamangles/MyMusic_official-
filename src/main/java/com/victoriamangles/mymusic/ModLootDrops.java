@@ -18,20 +18,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-/**
- * Fügt MyMusic Discs in den normalen Spielverlauf ein:
- * - Zufällig in bestimmten Loot-Kisten (Dungeons, Mineshafts, etc.)
- * - Zufällig als Drop von feindlichen Mobs beim Tod
- *
- * Beide Mechaniken sind über ModConfig (config/mymusic-common.toml) an/aus
- * schaltbar und in der Wahrscheinlichkeit einstellbar.
- */
 @Mod.EventBusSubscriber(modid = MyMusic.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class ModLootDrops {
 
     private static final Random RANDOM = new Random();
 
-    // ==================== LOOT KISTEN ====================
     @SubscribeEvent
     public static void onLootTableLoad(LootTableLoadEvent event) {
         if (!ModConfig.LOOT_CHEST_ENABLED.get()) {
@@ -61,7 +52,6 @@ public class ModLootDrops {
         event.getTable().addPool(poolBuilder.build());
     }
 
-    // ==================== MOB DROPS ====================
     @SubscribeEvent
     public static void onLivingDrops(LivingDropsEvent event) {
         if (!ModConfig.MOB_DROP_ENABLED.get()) {
